@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn {
+        transform: translate(500px, 500px);
+        width: 9vw;
+        height: 9vh;
+        font-size: 20px;
+        /* position: relative; */
+        background-color:black;
+        z-index: 1;
+
+    }
+
+    /* .btn:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 10px 20px rgb(255, 1, 1);
+    }  */
+
+     /* .btn:active {
+        background-color: yellow;
+    } */
+
+    .btn::after {
+        content: "click me";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 100px; */
+         position: absolute;
+        top: 0; 
+        left: 0;  
+        z-index: -1;
+        background-color: yellow;
+    }
+
+    .btn:hover:after {
+        background-color: pink;
+        opacity: 0;
+        transform: scaleX(1.4) scaleY(1.6);
+
+    }
+</style>
+
+<body>
+    <button class="btn">CLick me</button>
+</body>
+
+</html>
